@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   add_data.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fabperei <fabperei@student.42nice.fr >     +#+  +:+       +#+        */
+/*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 16:43:32 by fabperei          #+#    #+#             */
-/*   Updated: 2023/10/23 13:45:58 by fabperei         ###   ########.fr       */
+/*   Updated: 2023/10/24 12:02:13 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,5 +123,6 @@ int	map_height(char **argv, t_all *a)
 	a->map.index_end = map_height;
 	if (map_height == 0)
 		error_print("Map incorrect\n", a);
+	free(line);
 	return (map_height);
 }

@@ -6,7 +6,7 @@
 /*   By: feliciencatteau <feliciencatteau@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 13:30:31 by fabperei          #+#    #+#             */
-/*   Updated: 2023/10/24 11:47:28 by feliciencat      ###   ########.fr       */
+/*   Updated: 2023/10/24 12:06:55 by feliciencat      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ void	open_and_add_data(char **argv, t_all *a)
 	int		fd;
 	char	*line;
 
-	line = NULL;
+	line = "";
 	init_map_data(a);
 	index_first_line(argv, a);
 	a->map.mapheight = map_height(argv, a);
 	fd = open(argv[1], O_RDONLY);
-	if (fd == -1)
+	if (!fd)
 		exit(EXIT_FAILURE);
 	while (line)
 	{
